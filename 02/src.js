@@ -165,8 +165,6 @@ class Cordinate {
             this.context.fillText(value, this.width/2 + 3, this.circleRadius * i);
         })
 
-
-
         this.context.restore();
     }
 
@@ -174,22 +172,6 @@ class Cordinate {
 
         const xAxisCount = this.xCordinate[1] - this.xCordinate[0];
         const yAxisCount = this.yCordinate[1] - this.yCordinate[0];
-
-        /*
-        3 -> 0
-
-        0 -> 300
-
-        -3 -> 600 나와야함
-        */
-
-        /*
-        yAxisCount : this.height = number : x
-
-        x * yAxisCount = number * this.height
-
-        x = number * this.height / yAxisCount
-        */
 
         return {
             x:(number + window.Math.abs(this.xCordinate[0]))*this.width / xAxisCount,
