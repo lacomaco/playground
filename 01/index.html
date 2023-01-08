@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #layer{
+            position: relative;
+            width: 600px;
+            height: 600px;
+            margin:10px;
+            border: thin inset #aaa;
+        }
+
+        canvas {
+            border: 0px;
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="layer">
+        <canvas id="background" style="position: absolute; left:0;top:0;z-index: index 0;"></canvas>
+        <canvas id="chim" style="position: absolute; left:0;top:0;z-index: index 1;"></canvas>
+    </div>
+    <script src="./src.js">
+    </script>
+</body>
+</html>
