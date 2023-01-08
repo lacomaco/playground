@@ -412,8 +412,8 @@ class Circle {
         }
     }
 
-    // 수직인 접선인데 영어로 뭐지 ㅎ.. ㅗ
-    bubsun() {
+    // 수직인 접선
+    circleVerticalLine() {
         let {x:cx,y:cy} = this.getCurrentCircleXY();
         cx -= this.canvas.width/2;
         cy -= this.canvas.height/2
@@ -520,7 +520,7 @@ class Trigonometric {
                 this.context.moveTo(x,y);
                 this.context.lineTo(x,this.canvas.height/2);
             } else if(name === 'tan') {
-                const {m,getX,getY} = this.circle.bubsun();
+                const {m,getX,getY} = this.circle.circleVerticalLine();
 
                 if( m === Infinity || m === -Infinity){
                     return;
@@ -531,10 +531,6 @@ class Trigonometric {
 
                 this.context.moveTo(x,this.canvas.height/2);
                 this.context.lineTo(this.canvas.width/2,y);
-
-            } else if (name === 'csc'){
-
-            } else if (name === 'sec'){
 
             }
 
